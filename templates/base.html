@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +13,32 @@
     <style>
         .navbar-brand {
             font-weight: bold;
-            color: #28a745 !important;
+            color: #000000 !important;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .navbar-brand:hover {
+            color: #000000 !important;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-right: 8px;
+            object-fit: cover;
+            border: 1px solid #dee2e6;
+        }
+        
+        .navbar-nav .nav-link {
+            color: #000000 !important;
+        }
+        
+        .navbar-nav .nav-link:hover {
+            color: #333333 !important;
         }
         
         .card-img-top {
@@ -61,10 +87,11 @@
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" style="border-bottom: 1px solid #dee2e6; padding: 0.75rem 0;">
         <div class="container">
             <a class="navbar-brand" href="{% url 'loja:index' %}">
-                <i class="bi bi-shop"></i>O Cata Roupas Brechó 
+                <img src="{% static 'img/logo.jpg' %}" alt="Logo" class="logo-img">
+                O Cata Roupas Brechó
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

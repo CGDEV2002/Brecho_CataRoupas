@@ -140,6 +140,9 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 5242880
 
 STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Media files
 MEDIA_URL = "/media/"
