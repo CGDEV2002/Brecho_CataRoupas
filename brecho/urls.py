@@ -22,8 +22,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", include("loja.urls")),
+    path("api/", include("loja.api_urls")),  # API REST
     path("carrinho/", include("carrinho.urls")),
+    path("", include("loja.urls")),
 ]
 
 # Servir arquivos de mídia durante o desenvolvimento
