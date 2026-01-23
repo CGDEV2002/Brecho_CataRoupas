@@ -137,7 +137,7 @@ def finalizar_compra(request):
         )
         mensagem += f"Obrigado pela preferência! ✨"
 
-        numero_whatsapp = "5551992409119"
+        numero_whatsapp = "5551996235293"
 
         # URL do WhatsApp
         whatsapp_url = (
